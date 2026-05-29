@@ -1,0 +1,294 @@
+/* =====================================================
+   styles.css — Estilos creados por un Junior Developer
+   ===================================================== */
+
+/* Estilos de la página general */
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Barra de navegación simple */
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 16px;
+    
+    
+}
+
+.navbar-links a:hover {
+    color: #00ff00;
+    /* Color brillante clásico de junior */
+    text-decoration: none;
+
+}
+
+/* Área de contenido principal */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Títulos y cabecera de página */
+h1,
+h2,
+h3 {
+    color: #222;
+}
+
+.page-header {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/* Grid muy básico para las tarjetas */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Tarjeta (Card) estilo básico junior */
+.card {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 250px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+.card:hover {
+    border-color: #33d333;
+    /* Resalta en azul al pasar el mouse */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 10px 5px;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.card-body p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Contenedor de acciones */
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+/* Badge simple para ficticios */
+.badge-local {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: purple;
+    color: white;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.episode-code {
+    background-color: #e0f7fa;
+    color: #006064;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+    border: 1px solid #b2ebf2;
+}
+
+/* Botones con colores llamativos y hover simple */
+button,
+.btn-primary,
+.btn-secondary,
+.btn-edit,
+.btn-delete {
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #e2e6ea;
+}
+
+.btn-primary {
+    background-color: #22e71b;
+    color: rgb(0, 0, 0);
+    border: 1px solid #050505;
+}
+
+.btn-primary:hover {
+    background-color: #3ada2c;
+}
+
+.btn-edit {
+    background-color:#22e71b;
+    color: black;
+    border: 1px solid #000000;
+}
+
+.btn-edit:hover {
+    background-color: #26d83e;
+}
+
+.btn-delete {
+    background-color: #ff0720d7;
+    color: rgb(0, 0, 0);
+    border: 1px solid #000000;
+}
+
+.btn-delete:hover {
+    background-color: #bd2130;
+}
+
+/* Modal estándar básico */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-overlay.modal-visible {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 3px solid #333;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Formularios nivel estudiante/junior */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Toasts flotantes muy simples */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.toast.toast-visible {
+    opacity: 1;
+}
+
+.toast-success {
+    background-color: #28a745;
+}
+
+.toast-error {
+    background-color: #dc3545;
+}
+
+.toast-info {
+    background-color: #17a2b8;
+}
+
+/* Estilo de error simple */
+.error-msg {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+.navbar-links a.nav-active {
+    color: #00ff00;
+    font-weight: bold;
+    text-decoration: none;
+}

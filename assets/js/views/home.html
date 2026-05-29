@@ -1,0 +1,88 @@
+<!-- =====================================================
+     home.html — Vista base de la página principal
+     =====================================================
+     CAMBIOS: agregamos el botón "Crear personaje"
+     y el modal con el formulario CRUD.
+
+        
+-->
+
+<section>
+    <div class="page-header">
+        <h1>Rick and Morty Characters</h1>
+        <!-- Botón que abre el modal de crear personaje -->
+        <button id="btn-create" class="btn-primary">
+            Crear Personaje
+        </button>
+    </div>
+
+    <!-- Grid donde se renderizan los personajes -->
+    <div id="characters-container" class="grid"></div>
+</section>
+
+<!-- =====================================================
+     MODAL — Crear / Editar personaje
+     =====================================================
+     Está oculto por defecto (sin la clase modal-visible).
+     home.js le agrega/quita esa clase para mostrarlo/ocultarlo.
+-->
+<div id="character-modal" class="modal-overlay">
+    <div class="modal-content">
+
+        <!-- Título cambia según si es crear o editar -->
+        <h2 id="modal-title">Crear Personaje Ficticio</h2>
+
+        <form id="character-form">
+
+            <!--
+                Campo oculto para guardar el ID del personaje que se edita.
+                Si está vacío = estamos creando.
+                Si tiene valor = estamos editando ese ID.
+            -->
+            <input type="hidden" id="character-id">
+
+            <label for="input-name">Nombre *</label>
+            <input
+                type="text"
+                id="input-name"
+                placeholder="Ej: Rick Sanchez"
+                required
+            >
+
+            <label for="input-species">Especie *</label>
+            <input
+                type="text"
+                id="input-species"
+                placeholder="Ej: Human, Alien..."
+                required
+            >
+
+            <label for="input-gender">Género</label>
+            <select id="input-gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Genderless">Genderless</option>
+                <option value="unknown">unknown</option>
+            </select>
+
+            <label for="input-status">Estado</label>
+            <select id="input-status">
+                <option value="Alive">Alive</option>
+                <option value="Dead">Dead</option>
+                <option value="unknown">unknown</option>
+            </select>
+
+            <label for="input-image">URL de imagen</label>
+            <input
+                type="url"
+                id="input-image"
+                placeholder="https://..."
+            >
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Guardar</button>
+                <button type="button" id="modal-close" class="btn-secondary">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
